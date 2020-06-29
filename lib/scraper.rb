@@ -2,7 +2,9 @@ require 'open-uri'
 require 'pry'
 
 class Scraper
-  
+  doc = Nokogiri::HTML(open(index_url))
+
+     scraped_students = []
   
   
 
