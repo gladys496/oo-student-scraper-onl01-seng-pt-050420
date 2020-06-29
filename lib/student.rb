@@ -4,8 +4,8 @@ class Student
 
   @@all = []
 
-  def initialize(student_hash)
-    @student_hash = student_hash
+  def initialize(name, student_hash)
+    @name = name 
    @@all << self 
     
   end
