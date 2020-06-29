@@ -4,7 +4,7 @@ class Student
 
   @@all = []
 
-  def initialize(student_hash)
+  def initialize(student_hash, name)
     @name = name 
    @@all << self 
     
