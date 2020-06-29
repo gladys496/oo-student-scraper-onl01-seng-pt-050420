@@ -9,6 +9,8 @@ class Scraper
      scraped_students = []
      
      
+     
+     
  
   end
 
