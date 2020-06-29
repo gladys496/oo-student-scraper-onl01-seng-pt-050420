@@ -4,6 +4,8 @@ require 'pry'
 class Scraper
   
   def self.scrape_index_page(index_url)
+    
+    
    doc.css("div.student-card").each do |student|
       scraped_students << {
         name: student.css("h4.student-name").text, 
