@@ -15,6 +15,7 @@ class Scraper
         location: student.css("p.student-location").text, profile_url: "http://students.learn.co/students/kevin-mccormack.html"  #{student.css("a").attribute("href").value}"}
    end 
   end	
+end 
 
 
   def self.scrape_profile_page(profile_url)
