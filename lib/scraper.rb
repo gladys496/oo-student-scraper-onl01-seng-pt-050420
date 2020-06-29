@@ -8,13 +8,10 @@ class Scraper
 
      scraped_students = []
      
-     doc.css("div.student-card").each do |student|
-      scraped_students << [{:name => "Abby Smith", :location => "Brooklyn, NY", :profile_url => "students/abby-smith.html"},
-        {:name => "Joe Jones", :location => "Paris, France", :profile_url => "students/joe-jonas.html"},
-        {:name => "Carlos Rodriguez", :location => "New York, NY", :profile_url => "students/carlos-rodriguez.html"},
-        {:name => "Lorenzo Oro", :location => "Los Angeles, CA", :profile_url => "students/lorenzo-oro.html"},
-        {:name => "Marisa Royer", :location => "Tampa, FL", :profile_url => "students/marisa-royer.html"}]
-
+    doc.css("div.student-card").each do |student|
+      scraped_students << {
+        name: student.css("h4.student-name").text, 
+        location: student.css("p.student-location").text, profile_url: "http://students.learn.co/#{student.css("a").attribute("href").value}"}
      
      
 end 
